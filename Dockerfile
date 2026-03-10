@@ -1,7 +1,5 @@
 FROM python:3.12-slim
 
-LABEL org.opencontainers.image.source=https://github.com/ChrisThompsonTLDR/docker-docling-ollama
-
 WORKDIR /app
 
 # Docling needs libxcb, libGL, and libglib for headless rendering (matplotlib, etc.)
