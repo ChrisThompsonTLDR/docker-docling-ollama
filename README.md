@@ -12,4 +12,7 @@ docker build -t ghcr.io/christhompsontldr/docker-docling-ollama:latest .
 
 ## Publish
 
-Push to `main`; GitHub Actions builds and pushes to ghcr.io. Then make the package public: GitHub → Your profile → **Packages** → `docker-docling-ollama` → Package settings → **Change visibility** → Public
+1. Create a GitHub PAT with `write:packages` scope
+2. Add repo secret: Settings → Secrets → Actions → `GHCR_TOKEN` = your PAT
+3. Push to `main`; workflow builds and pushes to ghcr.io
+4. Make package public: Your profile → Packages → `docker-docling-ollama` → Package settings → Change visibility → Public

@@ -1,5 +1,7 @@
 name: Build and push
 
+# Requires repo secret GHCR_TOKEN: GitHub PAT with write:packages scope
+# Settings → Secrets and variables → Actions → New repository secret
 on:
   push:
     branches: [main]
@@ -18,7 +20,7 @@ jobs:
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          password: ${{ secrets.GHCR_TOKEN }}
 
       - name: Build and push
         uses: docker/build-push-action@v6
