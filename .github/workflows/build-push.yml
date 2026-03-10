@@ -4,12 +4,14 @@ on:
   push:
     branches: [main]
 
+# Required for GITHUB_TOKEN to push to ghcr.io (default may be read-only)
+permissions:
+  contents: read
+  packages: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      packages: write
     steps:
       - uses: actions/checkout@v4
 

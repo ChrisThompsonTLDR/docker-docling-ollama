@@ -12,6 +12,8 @@ docker build -t ghcr.io/christhompsontldr/docker-docling-ollama:latest .
 
 ## Publish
 
-Push to `main`; GitHub Actions builds and pushes to ghcr.io. Then make the package public:
+Push to `main`; GitHub Actions builds and pushes to ghcr.io.
 
-GitHub → Your profile → **Packages** → `docker-docling-ollama` → Package settings → **Change visibility** → Public
+**If you get `permission_denied: write_package`:** Repo Settings → Actions → General → Workflow permissions → set **Read and write permissions**, then re-run the workflow.
+
+After first successful push, make the package public: GitHub → Your profile → **Packages** → `docker-docling-ollama` → Package settings → **Change visibility** → Public
